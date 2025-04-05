@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'vazir';
+    src: url(../font/Vazir.woff2) format(woff2);
+}
+@font-face {
+    font-family: 'vazir thin';
+    src: url(../font/Vazir-Thin.woff2) format(woff2);
+}
+@font-face {
+    font-family: 'vazir medium';
+    src: url(../font/Vazir-Medium.woff2) format(woff2);
+}
+@font-face {
+    font-family: 'vazir light';
+    src: url(../font/Vazir-Light.woff2) format(woff2);
+}
+@font-face {
+    font-family: 'vazir bold';
+    src: url(../font/Vazir-Bold.woff2) format(woff2);
+}
+
+/* main styles */
+
+#veepn-breach-alert{
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'vazir';
+    font-weight: 500;
+}
+
+body{
+    font-family: 'vazir';
+    direction: rtl;
+    background-color: #e6effc5f ;
+    /* background-color: rgb(220, 239, 231); */
+    font-family: 'vazir'!important;
+}
+
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 85%;
+    max-height: 580px;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.right-top-side{
+    background-image: linear-gradient(to top left , rgb(36, 85, 210) , rgb(67, 141, 238));
+    display: flex;
+    color: white; 
+    width: 100%;
+    height: 25%;
+    border-radius: 12px 12px 70px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 45px;
+    color: white; 
+}
+
+.right-top-side .school-name h1{
+    font-size: 23px;
+    text-align: center;
+    font-family: 'vazir medium';
+    color: white;
+}
+
+.right-top-side > :last-child{
+    font-size: 21.5px;
+}
+
+.left-bottom-side{
+    background-color:rgb(255, 255, 255) ;
+    width: 100%;
+    height: 76%;
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.left-bottom-side h1{
+    font-size: 29px;
+    padding-bottom: 10px;
+    color: rgb(68, 68, 68);
+    font-family: 'vazir bold'!important;
+}
+.left-bottom-side input{
+    border: none;
+    outline: none;
+    background-color: rgb(228, 240, 239);
+    height: 40px;
+    width: 85%;
+    border-radius: 3px;
+    padding-right: 10px;
+    color: rgb(36, 36, 36);
+    font-size: 16px;
+}
+
+input::placeholder{
+    color: rgb(145, 145, 145);
+    font-size: 15px;
+}
+
+i.lock , i.user ,i.shield{
+    position: relative;
+    bottom: 28px;
+    right: 38%;
+    color: rgb(88, 88, 88);
+    transition: color .2s ease-in-out;
+}
+i.enve{
+    font-size: 14px  ;
+}
+
+i.lock:hover , i.user:hover ,i.shield:hover{
+    color: rgb(52, 52, 52);
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 88%;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(73, 126, 242);
+    transition: background-color .2s ease-in-out;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    background-color: rgb(50, 104, 221);
+}
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.7em;
+    position: relative;
+    left: 82px;
+    bottom: 12px;
+  }
+
+@media screen and (max-width:350px) {
+    .right-top-side .school-name h1{
+        font-size: 20px;
+    }
+    .right-top-side > :last-child{
+        font-size: 18px;
+    }
+    .left-bottom-side h1{
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width:767.99px) {
+ 
+    .container{
+        margin: 0 15px;
+        width: 100%;
+        max-width: 810px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        height: 90%;
+        max-height: 500px;
+        border-radius: 26px 26px 26px 26px;
+        box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.3);
+    }
+    
+    .right-top-side{
+        width: 48%;
+        height: 100%;
+        border-radius: 110px 12px 12px 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 48px;
+        color: white; 
+    }
+
+    .right-top-side .school-name h1{
+        font-size: 30px;
+        font-family: 'vazir medium';
+        color: white;
+    }
+    
+    .right-top-side > :last-child{
+        font-size: 24px;
+    }
+    
+    .left-bottom-side{
+        background-color:rgb(255, 255, 255) ;
+        width: 52%;
+        height: 100%;
+        border-radius: 20px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left-bottom-side h1{
+        font-size:32px;
+        padding-bottom: 15px;
+        font-family: 'vazir bold'!important;
+        color: rgb(75, 75, 75);
+    }
+    .left-bottom-side input{
+        border: none;
+        outline: none;
+        background-color: rgb(231, 243, 242);
+        height: 45px;
+        width: 86%;
+        border-radius: 3px;
+        padding-right: 15px;
+        font-size: 18px;
+        color: rgb(59, 59, 59);
+    }
+    button{
+        height: 46px;
+        font-size: 22px;
+        width: 90%;
+    }
+    input::placeholder{
+        font-size: 16px;
+        font-family: 'vazir';
+    }
+    i.lock , i.user , i.shield{
+        position: relative;
+        bottom: 30px;
+        right: 38%;
+        font-size: 18px;
+        transition: color .1s ease-in-out;
+    }
+    i.enve{
+        font-size: 16px  ;
+    }
+    .error-message {
+        display: none;
+        color: red;
+        font-size: 0.9em;
+        position: relative;
+        left: 95px;
+        bottom: 14px;
+      }
+}
+
