@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let isValid = true;
 
-    const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+    const usernameRegex = /^[\u0600-\u06FFa-zA-Z0-9_]{3,20}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const passwordRegex = /^(?=.*[\u0600-\u06FFa-zA-Z])(?=.*\d)[\u0600-\u06FFa-zA-Z\d]{8,}$/;
 
     if (!usernameRegex.test(username)) {
       usernameError.style.display = 'inline-block';
@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isValid) {
-      alert("ثبت‌نام با موفقیت انجام شد!");
       form.reset();
     }
   });
